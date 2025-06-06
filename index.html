@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python URL Shortener</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+        }
+        input {
+            width: 300px;
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <form method="POST">
+        <input type="text" name="url" placeholder="Enter long URL" required>
+        <button type="submit">Shorten</button>
+    </form>
+
+    {% if short_url %}
+        <h3>Shortened URL:</h3>
+        <a href="{{ short_url }}" target="_blank">{{ short_url }}</a>
+    {% endif %}
+</body>
+</html>
